@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dodge Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <div id="ui-layer">
+            <div id="top-bar">
+                <div class="stat-box">Score: <span id="score">0</span></div>
+                <div class="stat-box">Level: <span id="level">1</span></div>
+                <div class="stat-box toggle-btn" id="mute-btn">🔊</div>
+            </div>
+            
+            <div id="start-screen" class="screen active">
+                <h1>CAR DODGE<br>ADVENTURE</h1>
+                <p>Use Arrow Keys (or W,A,S,D) to move in all directions</p>
+                
+                <div class="car-selector-container">
+                    <p>Select Your Car:</p>
+                    <div id="car-selector">
+                        <div class="car-option color-blue active" data-color="#00d2ff"></div>
+                        <div class="car-option color-red" data-color="#ff3366"></div>
+                        <div class="car-option color-green" data-color="#33ff55"></div>
+                        <div class="car-option color-orange" data-color="#ff9933"></div>
+                        <div class="car-option color-purple" data-color="#cc33ff"></div>
+                    </div>
+                </div>
+
+                <button id="start-btn" class="glass-btn">START ENGINE</button>
+            </div>
+
+            <div id="game-over-screen" class="screen">
+                <h2>CRASHED!</h2>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <p>Level Reached: <span id="final-level">1</span></p>
+                <button id="restart-btn" class="glass-btn">PLAY AGAIN</button>
+            </div>
+        </div>
+        <canvas id="game-canvas"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
